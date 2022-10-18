@@ -1,0 +1,8 @@
+python -m pip install petl
+python -m pip install openpyxl
+python -m pip install xlrd
+python -m pip install xlrd
+
+se creo en postgres una base de datos llamada 'ingegi'
+password = postgres, user = postgres
+server = localhost. port = 5432
