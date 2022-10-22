@@ -1,10 +1,9 @@
-from lib2to3.pytree import convert
+from ast import ExceptHandler
 import petl as etl
 import pandas as pd
 import re
 import os
-from database import conexion as conn
-from database import table_exist
+from database import *
 
 #funciones utilizadas, etl.setheader, etl.tohtml, etl.tojson, etl.fromxls, etl.fromcsv, etl.rowslice, etl.todb
 
@@ -19,7 +18,10 @@ def to_html(folder: str,type:str):
             path = os.path.splitext(path)[0]+".html"
             if os.path.exists(f"{folder}{path}"):
                 os.remove(f"{folder}{path}")
-            etl.tohtml(table,f"{folder}{path}")
+            try:
+                etl.tohtml(table,f"{folder}{path}")
+            except:
+                print(f"{folder}{path}")
 
 def to_json(folder: str,type:str):
     paths = get_folder_content(folder,type)
@@ -32,11 +34,17 @@ def to_json(folder: str,type:str):
             path = os.path.splitext(path)[0]+".json"
             if os.path.exists(f"{folder}{path}"):
                 os.remove(f"{folder}{path}")
-            etl.tojson(table,f"{folder}{path}")    
+            try:
+                etl.tojson(table,f"{folder}{path}")
+            except:
+                print(f"{folder}{path}")
 
 def to_db(folder:str, file:str, table:str, conexion, override: bool = True):
     tabla = etl.fromcsv(f"{folder}{file}")
-    etl.todb(tabla, conexion, table, create=override)
+    try:
+        etl.todb(tabla, conexion, table, create=override)
+    except:
+        print("error, table")
 
 
 def get_folder_content(folder: str = None,content_type: str="all"):
