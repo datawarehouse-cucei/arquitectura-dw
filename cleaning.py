@@ -1,3 +1,4 @@
+from database import set_conexion
 from petl_functions import *
 
 #convertir .xls en inegi a .csv
@@ -36,17 +37,9 @@ for file in files:
 
 to_html(INEGI,"csv")
 
-#   obtener encabezados
-
-for folder in folders:
-    to_html(RAMA+folder,"csv")
-
 #   remover primera fila después del encabezadi
 
 to_json(INEGI,"csv")
-
-for folder in folders:
-    to_json(RAMA+folder,"csv")
 
 files = get_folder_content(INEGI,"csv")
 
@@ -67,20 +60,34 @@ for file in files:
     os.rename(INEGI+file,f"{INEGI}{newname}")
 
 files = get_folder_content(INEGI,"csv")
-
+conn = set_conexion()
 for file in files:
     table = os.path.basename(file)
     table = os.path.splitext(file)[0]
-    to_db(INEGI, file,f"{table}",conn, not table_exist(table))
+    to_db(INEGI, file,f"{table}",conn, not table_exist(table,conn))
+
+
+
+
+for folder in folders:
+    files = get_folder_content(RAMA+folder,"csv")
+    for file in files:
+        table = etl.fromcsv(f"{RAMA}{folder}/{file}")
+        headers = etl.header(table)
+        headers = list(headers)
+        headers[0] = "id"
+        table = change_headers(table,headers)
+        table = etl.convert(table,"id",int)
+        etl.tocsv(table,f"{RAMA}{folder}/n{file}")
+        os.remove(f"{RAMA}{folder}/{file}")
+        os.rename(f"{RAMA}{folder}/n{file}",f"{RAMA}{folder}/{file}")
+
+for folder in folders:
+    to_html(f"{RAMA}{folder}/","csv")
 
 RAMA = "RAMA/"
 
 folders = get_folder_content(RAMA)
 
 for folder in folders:
-    files = get_folder_content(RAMA+folder)
-    for file in files:
-        table = os.path.basename(file)
-        table = os.path.splitext(file)[0]
-        table = "RAMA"+table[4:]
-        to_db(f"{RAMA}{folder}/", file,table,conn, not table_exist(table))
+    to_json(f"{RAMA}{folder}/","csv")
