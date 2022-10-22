@@ -1,14 +1,21 @@
-from dotenv import dotenv_values
-import psycopg2 
+import petl as etl
+import pandas as pd
 
-config = dotenv_values('.env')
+class ETL:
 
-def set_conexion(db: str=config['DATABASE'], port:str=config['PORT'],
-                 user:str=config['PASSWORD'],password:str=config['PASSWORD'], host:str=config['HOST']):
-    conexion = psycopg2.connect(database=db, user=user, password=password, host=host, port=port)
-    return conexion
+    def __init__(self):
+        return
 
-def table_exist(table:str,conexion):
-    cur = conexion.cursor()
-    cur.execute(f"select * from information_schema.tables where table_name='{table}'")
-    return bool(cur.rowcount)
+    def read(path: str=None):
+        if path != None:
+            with open(path,'r') as file:                            
+                return file.read()
+        return """<!DOCTYPE html><html>
+                    <head>
+                        <title>ERROR!!!</title>
+                    </head>
+                    <body>
+                        <h1>Ya reprobaste la materia!!</h1>
+                        <p>read</p>
+                    </body>
+                    </html>"""                    
