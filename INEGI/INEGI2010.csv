@@ -1,0 +1,32 @@
+Accidentes de tránsito terrestre
+,Año de ocurrencia : 2010
+,Causa del accidente : Total
+,Clase de accidente : Total
+,Cond aliento alcoholico : Total
+,Cond uso cinturon : Total
+,Dia de ocurrencia : Total
+,Edad accidentado : Total
+,Ent y mun de ocurrencia : Ciudad de México
+,Mes de ocurrencia : Total
+,Superficie rodamiento : Total
+,Zona ocurrio accidente : Total
+,
+
+Consulta de: Accidentes de tránsito   Por: Tipo de accidente   Según: Sexo conductor
+ , Total, Se fugó, Hombre, Mujer
+ Total,"14,729","2,298","11,518", 913
+ Colisión con vehículo automotor,"10,266","1,744","7,915", 607
+ Colisión con peatón (atropellamiento),"1,092", 233, 786, 73
+ Colisión con animal, 3, 1, 2, 
+ Colisión con objeto fijo,"2,041", 185,"1,734", 122
+ Volcadura, 73, 16, 52, 5
+ Caída de pasajero, 95, 6, 88, 1
+ Salida del camino, 9, 2, 7, 
+ Incendio, 3, , 2, 1
+ Colisión con motocicleta, 664, 91, 527, 46
+ Colisión con ciclista, 145, 18, 117, 10
+ Otro, 338, 2, 288, 48
+
+
+FUENTE: INEGI. Estadísticas de accidentes de tránsito terrestre en zonas urbanas y suburbanas.
+

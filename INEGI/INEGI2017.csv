@@ -1,0 +1,32 @@
+Accidentes de tránsito terrestre
+,Año de ocurrencia : 2017
+,Causa del accidente : Total
+,Clase de accidente : Total
+,Cond aliento alcoholico : Total
+,Cond uso cinturon : Total
+,Dia de ocurrencia : Total
+,Edad accidentado : Total
+,Ent y mun de ocurrencia : Ciudad de México
+,Mes de ocurrencia : Total
+,Superficie rodamiento : Total
+,Zona ocurrio accidente : Total
+,
+
+Consulta de: Accidentes de tránsito   Por: Tipo de accidente   Según: Sexo conductor
+ , Total, Se fugó, Hombre, Mujer
+ Total,"12,321","1,481","9,375","1,465"
+ Colisión con vehículo automotor,"7,745","1,054","5,792", 899
+ Colisión con peatón (atropellamiento), 763, 215, 508, 40
+ Colisión con animal, 1, , 1, 
+ Colisión con objeto fijo,"2,688", 80,"2,180", 428
+ Volcadura, 23, 4, 19, 
+ Caída de pasajero, 30, 3, 27, 
+ Salida del camino, 5, 1, 4, 
+ Incendio, 1, 1, , 
+ Colisión con motocicleta, 847, 88, 694, 65
+ Colisión con ciclista, 103, 23, 74, 6
+ Otro, 115, 12, 76, 27
+
+
+FUENTE: INEGI. Estadísticas de accidentes de tránsito terrestre en zonas urbanas y suburbanas.
+

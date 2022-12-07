@@ -1,0 +1,31 @@
+Accidentes de tránsito terrestre
+,Año de ocurrencia : 2020
+,Causa del accidente : Total
+,Clase de accidente : Total
+,Cond aliento alcoholico : Total
+,Cond uso cinturon : Total
+,Dia de ocurrencia : Total
+,Edad accidentado : Total
+,Ent y mun de ocurrencia : Ciudad de México
+,Mes de ocurrencia : Total
+,Superficie rodamiento : Total
+,Zona ocurrio accidente : Total
+,
+
+Consulta de: Accidentes de tránsito   Por: Tipo de accidente   Según: Sexo conductor
+ , Total, Se fugó, Hombre, Mujer
+ Total,"6,549","1,076","4,802", 671
+ Colisión con vehículo automotor,"4,288", 743,"3,087", 458
+ Colisión con peatón (atropellamiento), 428, 104, 294, 30
+ Colisión con animal, 1, , 1, 
+ Colisión con objeto fijo, 889, 70, 718, 101
+ Volcadura, 32, 5, 27, 
+ Caída de pasajero, 17, 2, 15, 
+ Salida del camino, 9, , 9, 
+ Colisión con motocicleta, 790, 130, 585, 75
+ Colisión con ciclista, 83, 16, 62, 5
+ Otro, 12, 6, 4, 2
+
+
+FUENTE: INEGI. Estadísticas de accidentes de tránsito terrestre en zonas urbanas y suburbanas.
+
